@@ -14,38 +14,37 @@ public class Temperature
      */
     public Temperature()
     {
-        ArrayList<Double> temperature = new ArrayList<Double>();
+        ArrayList<Double> temperatures = new ArrayList<Double>();
         
-        temperature.add(37.2);
-        temperature.add(32.9);
-        temperature.add(37.9);
-        temperature.add(37.2);
-        temperature.add(47.8);
-        temperature.add(7.1);
+        temperatures.add(37.2);
+        temperatures.add(32.9);
+        temperatures.add(37.9);
+        temperatures.add(37.2);
+        temperatures.add(47.8);
+        temperatures.add(7.1);
         
+        fever(temperatures);
     }
 
-    /**
-     * 
-     */
-    public String checkTemperature(String[] temperature)
+    //Question 25
+    public void fever (ArrayList<Double> temperatures)
     {
-        /**
-         * The method refers to the ArrayList to look for all of the 
-         * temperature and selects all of them that are "above 37.5" using 
-         * a conditionnal method. If there aren't any, then it'll print
-         * "the temperature isn't close to be high rnough for a fever". 
-         * It's a similar idea for the maximum where it looks through the 
-         * ArrayList temperature and will only print the highest value that
-         * it can find. Conditionnal loops will use to check the temperature.
-         */
-
-        if (temperature.contains(37.5))
+        int count = 0;
+        double max = 0.0;
+        
+        for (Double temp : temperatures)
         {
-          for(String i : temperature)
-        {
-            System.out.println(i);
-        }  
+            if (temp>37.5) 
+            {
+                count++;
+            }
+            if (temp>max)
+            {
+                max = temp;
+            }
         }
+        
+        System.out.println("Amount of fever: " + count);
+        System.out.println("Highest fever: " + max);
     }
 }

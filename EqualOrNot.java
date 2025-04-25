@@ -16,22 +16,19 @@ public class EqualOrNot
         
     }
 
-    /**
-     * 
-     */
-    public String compare()
+    //Question 24
+    public void compare()
     {
+        //a
         String valueA = "2";
-        String valueB = "2";
+        String valueB = "3";
         
-        if(valueA == valueB)
-        {
-            System.out.println("Both values are equal.");
+        //b
+        if(valueA.equals(valueB)) {
+            System.out.println("EQUAL");
         } 
-        else
-        {
-            System.out.println("Both values aren't equal.");
+        else {
+            System.out.println("NOT EQUAL");
         }
-        return valueA;
     }
 }

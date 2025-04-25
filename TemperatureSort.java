@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Write a description of class TemperatureMax here.
@@ -10,31 +11,42 @@ public class TemperatureSort
 {
 
     /**
-     * Constructor for objects of class TemperatureSort
+     * Constructor for objects of class TemperatureMax
      */
     public TemperatureSort()
     {
-        ArrayList<Double> temperature = new ArrayList<Double>();
+        ArrayList<Double> temperatures = new ArrayList<Double>();
         
-        temperature.add(37.2);
-        temperature.add(32.9);
-        temperature.add(37.9);
-        temperature.add(37.2);
-        temperature.add(47.8);
-        temperature.add(7.1);
+        temperatures.add(37.2);
+        temperatures.add(32.9);
+        temperatures.add(37.9);
+        temperatures.add(37.2);
+        temperatures.add(47.8);
+        temperatures.add(7.1);
         
+        fever(temperatures);
     }
 
-    /**
-     * 
-     */
-    public String checkTemperature()
+    //Question 27
+    public void fever (ArrayList<Double> temperatures)
     {
-        /**
-         * The sort method looks through the ArrayList temperature to organise
-         * the values from the smallest to the biggest. Since there is no
-         * return, the list will be printed instead. The collection will
-         * change, but not the ArrayList.
-         */
+        int count = 0;
+        double max = 0.0;
+        
+        for (Double temp : temperatures)
+        {
+            if (temp>37.5) 
+            {
+                count++;
+            }
+            if (temp>max)
+            {
+                max = temp;
+            }
+        }
+        
+        System.out.println("Amount of fever: " + count);
+        Collections.sort(temperatures);
+        System.out.println("Max element (Sorted list): " + temperatures.get(temperatures.size()-1));
     }
 }
