@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class TemperatureMax here.
@@ -13,6 +14,14 @@ public class TemperatureSort
      */
     public TemperatureSort()
     {
+        ArrayList<Double> temperature = new ArrayList<Double>();
+        
+        temperature.add(37.2);
+        temperature.add(32.9);
+        temperature.add(37.9);
+        temperature.add(37.2);
+        temperature.add(47.8);
+        temperature.add(7.1);
         
     }
 

@@ -21,8 +21,9 @@ public class EqualOrNot
      */
     public String compare()
     {
-        String valueA = 2;
-        String valueB = 2;
+        String valueA = "2";
+        String valueB = "2";
+        
         if(valueA == valueB)
         {
             System.out.println("Both values are equal.");
@@ -31,5 +32,6 @@ public class EqualOrNot
         {
             System.out.println("Both values aren't equal.");
         }
+        return valueA;
     }
 }
